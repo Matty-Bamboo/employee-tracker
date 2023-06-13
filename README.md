@@ -11,10 +11,10 @@ A command-line application built to manage a company's employee database, using 
 The following images show the web application's appearance and functionality:
 
 ## Technologies
-Node.js
-Inquirer 8.2.4
-MySQL 3.3.4
-dotenv 16.1.4
+- Node.js
+- Inquirer 8.2.4
+- MySQL 3.3.4
+- dotenv 16.1.4
 
 ## Credits
 

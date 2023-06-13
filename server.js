@@ -1,11 +1,19 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
-const sequelize = require('./config/connection');
+require('dotenv').config();
 
-// turn on connection to db and server
-sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Now listening'));
-  });
+
+// Connect to database
+const db = mysql.createConnection(
+    {
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
+    },
+    console.log(`Connected to the employee_db.`)
+  );
+
 
 async function displayDepartments() {
     try {
